@@ -1,8 +1,10 @@
 import express from "express";
-import { HomeIndex } from "../controllers/actorCon";
+import { CreateActor, 
+    GetAllActors } from "../controllers/actorCon";
 
 export const actorRt: express.Router = express.Router();
-    actorRt.get("/",  HomeIndex);
+    actorRt.post("/", CreateActor);
+    actorRt.get("/",  GetAllActors);
 
 
 
