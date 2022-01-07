@@ -12,7 +12,7 @@ import { createConnection } from "typeorm";
         type: "postgres",
         url: process.env.DATABASE_URL,
         synchronize: true,
-        entities: ["src/models/**/*.ts"],
+        entities: ["dist/models/**/*.js"],
     });
     console.log("PostgreSQL is now Connected!");
     const app: express.Application = express();
