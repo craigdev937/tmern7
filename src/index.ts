@@ -13,6 +13,9 @@ import { createConnection } from "typeorm";
         url: process.env.DATABASE_URL,
         synchronize: true,
         entities: ["dist/models/**/*.js"],
+        extra: {
+            ssl: true
+        }
     });
     console.log("PostgreSQL is now Connected!");
     const app: express.Application = express();
