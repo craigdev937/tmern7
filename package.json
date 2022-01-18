@@ -3,10 +3,17 @@
   "version": "1.0.0",
   "description": "A projected created with Express.js, TypeScript, PostgreSQL, and TypeORM.",
   "main": "index.ts",
+  "engines": {
+    "node": "16.x",
+    "npm": "8.x"
+  },
   "scripts": {
+    "start": "node dist/index.js",
+    "postinstall": "tsc",
+    "watch-node": "nodemon dist/index.js",
+    "watch-ts": "tsc -w",
     "dev": "nodemon --exec ts-node src/index.ts",
-    "pro": "tsc && node dist/index.js",
-    "start": "node dist/index.js"
+    "pro": "tsc && node dist/index.js"
   },
   "repository": {
     "type": "git",
